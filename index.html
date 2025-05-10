@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyCore Systems</title>
+  <style>
+    /* General Page Styling */
+    body {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    /* Featured Laptops Section */
+    .laptops-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .laptop-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s ease;
+      
+    }
+  
+  .buy-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #5bab51;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .buy-btn:hover {
+    background-color: #1de23e;
+  }
+
+
+
+    .laptop-card:hover {
+      transform: scale(1.05);
+      color:#5bab51;
+      background-color: #6de3796d;
+      
+    }
+
+    .laptop-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .laptop-card h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      
+    }
+
+    .laptop-card p {
+      font-size: 14px;
+      color: #000000;
+      margin: 5px 0;
+    }
+
+    .laptop-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #000000;
+    }
+
+    /* Chatbot Section */
+    .chat-container {
+      
+      bottom: 20px;
+      right: 20px;
+      
+      height: 400%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-box {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .user-message, .bot-message {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    .user-message {
+      background-color: #d1e7fd;
+      margin-left: auto;
+    }
+
+    .bot-message {
+      background-color: #e7e7e7;
+      margin-right: auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-top: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #5bab51;
+      color: rgb(4, 4, 4);
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #1de23e;
+    }
+
+    img {
+      width: 170px;
+            /* Fixed width */
+            height: 200px;
+            /* Fixed height */
+            object-fit: cover;
+    }
+    h3{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1> Welcomes To HappyCore Systems</h1>
+    <p>The Smarter Way to Shop Laptops 💻 !</p>
+  </header>
+  <br>
+  <h3>Some Highly <u>Recommended</u> and <u>Top-Selling</u> Laptops From HappyCores Systems👍 </h3>
+
+  <!-- Featured Laptops Section -->
+  <div class="laptops-container">
+    <div class="laptop-card">
+      <img src="asus.png" alt="Laptop 1">
+      <h3>Asus VivoBook 14</h3>
+      <p>Processor: Intel i5</p>
+      <p>RAM: 8GB</p>
+      <p>SSD: 512GB</p>
+      <div class="price">₹1,45,000</div>
+      <a href="https://www.amazon.in/ASUS-Vivobook-Core-12th-1235U/dp/B0BTV4V452" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+    
+    <div class="laptop-card">
+      <img src="pavall.jpg" alt="Laptop 2">
+      <h3>HP Pavilion 15</h3>
+      <p>Processor: Intel i7</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 512GB</p>
+      <div class="price">₹52,000</div>
+      <a href="https://www.amazon.in/Pavilion-Micro-Edge-Display-Graphics-15-Eg2009Tu/dp/B09WDHWMQY" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+    <div class="laptop-card">
+      <img src="Lenovo IdeaPad 3.jpg" alt="Laptop 3">
+      <h3>Lenovo IdeaPad 3</h3>
+      <p>Processor: AMD Ryzen 5</p>
+      <p>RAM: 8GB</p>
+      <p>SSD: 256GB</p>
+      <div class="price">₹42,000</div>
+      <a href="https://www.amazon.in/Lenovo-Ideapad-Backlit-Keyboard-82XQ008VIN/dp/B0CD4BQ4SF?th=1" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="victus.jpg" alt="Laptop 9">
+      <h3> HP Victus</h3>
+      <p>Processor: AMD intel 5</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 256GB</p>
+      <div class="price">₹85,990</div>
+      <a href="https://www.flipkart.com/hp-victus-core-i7-11th-gen-16-gb-512-gb-ssd-windows-11-home-6-graphics-nvidia-geforce-rtx-3060-16-d0361tx-gaming-laptop/p/itm5927367b3400c" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="pavall.jpg" alt="Laptop 4">
+      <h3> HP Pavellion</h3>
+      <p>Processor: AMD intel 7</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 1TB</p>
+      <div class="price">₹1,08,000</div>
+      <a href="https://www.amazon.in/HP-Pavilion-inches-Windows-Natural/dp/B09KV2CNHK" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="omen.jpg" alt="Laptop 5">
+      <h3>HP Omen</h3>
+      <p>Processor: intel 7</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 1TB</p>
+      <div class="price">₹1,29,000</div>
+      <a href="https://www.amazon.in/dp/B0D1BT9SXF/ref=sspa_dk_detail_1?psc=1&pd_rd_i=B0D1BT9SXF&pd_rd_w=v3EkK&content-id=amzn1.sym.9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_p=9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_r=C1T0SQM72MPV4SDK5SFA&pd_rd_wg=OgoeS&pd_rd_r=d3eb9322-4336-4581-96d1-5b5cb252afaf&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="APLLE.jpg" alt="Laptop 6">
+      <h3> Apple Mac m4</h3>
+      <p>Processor: mAC 7</p>
+      <p>RAM: 32GB</p>
+      <p>SSD: 1TB</p>
+      <div class="price">₹3,39,000</div>
+      <a href="https://www.apple.com/in/shop/buy-mac/macbook-pro/14-inch-space-black-standard-display-apple-m4-max-with-14-core-cpu-32-core-gpu-16-core-neural-engine-36gb-memory-1tb" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="DELL1.jpg" alt="Laptop 7">
+      <h3>Dell Inspiron</h3>
+      <p>Processor:Intel 7</p>
+      <p>RAM: 8GB</p>
+      <p>SSD: 1TB</p>
+      <div class="price">₹66,999</div>
+      <a href="https://www.amazon.in/Dell-Inspiron-i7-1355U-Processor-39-62cm/dp/B0DSFP9FCS/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.2ARvfYekKXuO1kCfO8pKOlc10wG3rSA5RNm3bIxT4sjLRhzGqJAaXgMN9gQ19m2K4fufkTFL9IebyEPS25kfIuMefTKtRcVlFq-dkKZdARsCjUy-s1-wUKc_3Yyce2fTB4YmsbqWjEvq2yRGBMC6eYif1LgI5_pBx6BKeroHtVZgKuPLVUduvNQ66kvVadJo-yN2LDWfMzUW3ILywRG45lFoSVgUJLQWXOTrL0tcWVM.WAyAos0gZfCLjtuC1PpQggKoZEyh8MJURdeBOkchmI0&dib_tag=se&keywords=dell%2Binspiron%2Bi7%2B11th%2Bgeneration&nsdOptOutParam=true&qid=1746706389&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="Dell2.jpg" alt="Laptop 8">
+      <h3>Dell XPS </h3>
+      <p>Processor:Intel i5</p>
+      <p>RAM: 8GB</p>
+      <p>SSD: 512GB</p>
+      <div class="price">₹1,54,446</div>
+      <a href="https://www.flipkart.com/dell-xps-intel-core-i5-10th-gen-1035g1-8-gb-512-gb-ssd-windows-10-home-9300-thin-light-laptop/p/itmbdb9070446946" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+
+    <div class="laptop-card">
+      <img src="rog.png" alt="Laptop 10">
+      <h3>ASUS ROG Strik </h3>
+      <p>Processor:Intel i5</p>
+      <p>RAM: 8GB</p>
+      <p>SSD: 512GB</p>
+      <div class="price">₹68,190</div>
+      <a href="https://www.flipkart.com/asus-rog-strix-g-core-i5-9th-gen-8-gb-1-tb-hdd-windows-10-home-4-gb-graphics-nvidia-geforce-gtx-1050-g531gd-bq036t-gaming-laptop/p/itm9eefc403975a8" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="asus2.jpg" alt="Laptop 11">
+      <h3>Asus Zenbook</h3>
+      <p>Processor:Intel i7</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 512GB</p>
+      <div class="price">₹1,28,690</div>
+      <a href="https://www.flipkart.com/asus-zenbook-14-oled-intel-evo-p-series-core-i7-12th-gen-16-gb-512-gb-ssd-windows-11-home-ux3402za-km731ws-thin-light-laptop/p/itm84612fb82dd3a" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+
+    <div class="laptop-card">
+      <img src="asus3.jpg" alt="Laptop 12">
+      <h3>Asus TUF </h3>
+      <p>Processor:Intel i9</p>
+      <p>RAM: 16GB</p>
+      <p>SSD: 1TB</p>
+      <div class="price">₹1,24,990</div>
+      <a href="https://www.flipkart.com/asus-tuf-gaming-f15-core-i9-11th-gen-16-gb-1-tb-ssd-windows-10-6-gb-graphics-nvidia-geforce-rtx-3060-240-hz-fx566hm-az096ts-laptop/p/itmd068ec3223a62" target="_blank" class="buy-btn">BUY NOW</a>
+    </div>
+  </div>
+
+  <!-- Chatbot Section -->
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Need help choosing a laptop? Type here...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    // Function to send user message to FastAPI and get response
+    async function sendMessage() {
+      const userInput = document.getElementById("user-input");
+      const userMessage = userInput.value;
+  
+      if (userMessage.trim() === "") {
+        alert("Please enter a message.");
+        return;
+      }
+  
+      // Display user message
+      const chatBox = document.getElementById("chat-box");
+      chatBox.innerHTML += `<div class="user-message">${userMessage}</div>`;
+      userInput.value = ""; // Clear input
+  
+      try {
+        // Fetch bot response
+        const response = await fetch("http://127.0.0.1:8000/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message: userMessage })
+        });
+  
+        const data = await response.json();
+        const botResponse = data.response;
+  
+        // Display bot response
+        chatBox.innerHTML += `<div class="bot-message">${formatResponse(botResponse)}</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+  
+      } catch (error) {
+        console.error("Error:", error);
+        chatBox.innerHTML += `<div class="bot-message">Sorry, something went wrong.</div>`;
+      }
+    }
+  
+    // Add Enter key support
+    document.getElementById("user-input").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission if inside form
+        sendMessage(); // Trigger send
+      }
+    });
+  
+    // Format response with line breaks
+    function formatResponse(response) {
+      return response.replace(/\n/g, "<br>");
+    }
+  </script>
+  
+
+</body>
+<footer style="background-color: #000000; color: #fff; padding: 40px 20px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 250px; margin-bottom: 20px;">
+      <h3>HappyCore 💻</h3>
+      <p>Your happy place for smart laptops and unbeatable deals.</p>
+      <p>Email: support@happycore.com</p>
+      <p>Phone: +91 9404291025</p>
+      <p>Address:Devachi Alandi,Pune,Maharashtra</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h4>Quick Links🔗</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/about" style="color: #fff;">About Us</a></li>
+        <li><a href="/products" style="color: #fff;">Shop Laptops</a></li>
+        <li><a href="/contact" style="color: #fff;">Contact</a></li>
+        <li><a href="/faq" style="color: #fff;">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Policy Links -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h4>Our Policies📜</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/privacy-policy" style="color: #fff;">Privacy Policy</a></li>
+        <li><a href="/terms" style="color: #fff;">Terms & Conditions</a></li>
+        <li><a href="/return-policy" style="color: #fff;">Return Policy</a></li>
+        <li><a href="/shipping" style="color: #fff;">Shipping Info</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h4>Follow Us✅</h4>
+      <p>
+        <a href="https://www.instagram.com/mod_deore?igsh=MTR5Y2FtNHMxNXkzaw==" style="color: #fff;">Instagram</a><br>
+        <a href="https://www.linkedin.com/in/mod-deore-836504345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="color: #fff;">LinkedIn</a>
+      </p>
+    </div>
+
+  </div>
+
+  <hr style="border: 0; height: 1px; background: #444;">
+  <p style="text-align: center; padding-top: 10px;">&copy; 2025 HappyCore. All rights reserved :)</p>
+</footer>
+</html>
